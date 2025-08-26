@@ -4,11 +4,11 @@ let computerScore = 0;
 function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3) + 1;
     if (randNum == 1) {
-        return "Rock";
+        return "rock";
     } else if (randNum == 2) {
-        return "Paper"
+        return "paper"
     } else {
-        return "Scissors"
+        return "scissors"
     } 
 }
 
