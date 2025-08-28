@@ -19,11 +19,11 @@ function playGame() {
     let computerScore = 0;
 
     function playRound() {
-        
+        const computerChoice = getComputerChoice();
+        const humanChoice = getHumanChoice();
     }
 
-//         const computerChoice as getComputerChoice
-//         const humanChoice as getHumanChoice
+//         
 
 //         IF player beats computer THEN
 //             increment humanScore by 1
