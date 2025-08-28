@@ -11,9 +11,11 @@ function getComputerChoice() {
 
 
 function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper or Scissors", );
-    return humanChoice; // make it case sensitive
+    let humanChoice = prompt("Rock, Paper or Scissors", ).toLowerCase();
+    return humanChoice;
 }
+
+console.log(getHumanChoice())
 
 // FUNCTION playGame
 //     INIT humanScore as 0
