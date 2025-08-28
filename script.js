@@ -22,7 +22,10 @@ function playGame() {
         const computerChoice = getComputerChoice();
         const humanChoice = getHumanChoice();
 
-        if (humanChoice == "rock" && computerChoice == "scissors" ||
+        if (humanChoice === computerChoice) {
+            console.log(`It's a tie! You both picked ${humanChoice}. The score is ${humanScore}-${computerScore}.`)
+        } else if 
+            (humanChoice == "rock" && computerChoice == "scissors" ||
             humanChoice == "paper" && computerChoice == "rock" ||
             humanChoice == "scissors" && computerChoice == "paper") {
                 humanScore++;
