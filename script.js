@@ -21,9 +21,7 @@ function playGame() {
     function playRound() {
         const computerChoice = getComputerChoice();
         const humanChoice = getHumanChoice();
-    }
-
-//         
+    }         
 
 //         IF player beats computer THEN
 //             increment humanScore by 1
@@ -32,11 +30,11 @@ function playGame() {
 //             increment ComputerScore by 1
 //             console.log(You lose! X beats Y)
 
-//     CALL playRound()
-//     CALL playRound()
-//     CALL playRound()
-//     CALL playRound()
-//     CALL playRound()
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
 }
 
 playGame();
