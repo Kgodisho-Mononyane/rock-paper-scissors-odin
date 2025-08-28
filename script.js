@@ -17,10 +17,11 @@ function getHumanChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-//     INIT humanScore as 0
-//     INIT computerScore as 0
 
-//     FUNCTION playRound
+    function playRound() {
+        
+    }
+
 //         const computerChoice as getComputerChoice
 //         const humanChoice as getHumanChoice
 
