@@ -10,8 +10,8 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper or Scissors", ).toLowerCase();
-    return humanChoice;
+    let humanChoice = prompt("Rock, Paper or Scissors", );
+    return humanChoice.toLowerCase();
 }
 
 function playGame() {
@@ -21,15 +21,17 @@ function playGame() {
     function playRound() {
         const computerChoice = getComputerChoice();
         const humanChoice = getHumanChoice();
+
+        if (humanChoice == "rock" && computerChoice == "scissors" ||
+            humanChoice == "paper" && computerChoice == "rock" ||
+            humanChoice == "scissors" && computerChoice == "paper") {
+                humanScore++;
+                console.log(`You win! ${humanChoice} beats ${computerChoice}. The score is ${humanScore}-${computerScore}.`);
+            } else {
+                computerScore++;
+                console.log(`You lose! ${computerChoice} beats ${humanChoice}. The score is ${humanScore}-${computerScore}.`);
+            }
     }         
-
-//         IF player beats computer THEN
-//             increment humanScore by 1
-//             console.log(You win! X beats Y)
-//         Else
-//             increment ComputerScore by 1
-//             console.log(You lose! X beats Y)
-
     playRound();
     playRound();
     playRound();
