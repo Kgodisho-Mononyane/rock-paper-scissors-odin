@@ -9,9 +9,11 @@ function getComputerChoice() {
     } 
 }
 
-// FUNCTION getHumanChoice
-//     GET humanChoice of rock paper or scissors
-//     RETURN humanChoice (make it case sensitive)
+
+function getHumanChoice() {
+    let humanChoice = prompt("Rock, Paper or Scissors", );
+    return humanChoice; // make it case sensitive
+}
 
 // FUNCTION playGame
 //     INIT humanScore as 0
@@ -40,11 +42,5 @@ function getComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-
-
-function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper or Scissors", );
-    return humanChoice;
-}
 
 getHumanChoice();
