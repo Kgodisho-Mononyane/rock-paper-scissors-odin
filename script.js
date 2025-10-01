@@ -1,12 +1,28 @@
 const container = document.querySelector("#button-container");
 const output = document.querySelector("#output");
 
+function getComputerChoice() {
+    let randNum = Math.floor(Math.random() * 3) + 1;
+    if (randNum == 1) {
+        return "rock";
+    } else if (randNum == 2) {
+        return "paper"
+    } else {
+        return "scissors"
+    } 
+}
+
+function getHumanChoice(choice) {
+    let humanChoice = choice;
+    return humanChoice.toLowerCase();
+}
+
 container.addEventListener("click", (e) => {
     let target = e.target;
     switch(target.id) {
         case "rock-btn":
             console.log("rock clicked");
-            //call playRound function playRound(rock) 
+            //call playRound function playRound(rock)
             break;
         case "paper-btn":
             console.log("paper clicked");
@@ -18,18 +34,6 @@ container.addEventListener("click", (e) => {
             break;
     }
 })
-
-
-function getComputerChoice() {
-    let randNum = Math.floor(Math.random() * 3) + 1;
-    if (randNum == 1) {
-        return "rock";
-    } else if (randNum == 2) {
-        return "paper"
-    } else {
-        return "scissors"
-    } 
-}
 
 function playGame() {
     let humanScore = 0;
@@ -51,7 +55,8 @@ function playGame() {
                 computerScore++;
                 console.log(`You lose! ${computerChoice} beats ${humanChoice}. The score is ${humanScore}-${computerScore}.`);
             }
-    }         
+    }
+
 }
 
 playGame();
