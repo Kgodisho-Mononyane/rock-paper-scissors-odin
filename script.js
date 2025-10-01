@@ -1,3 +1,21 @@
+const container = document.querySelector("#button-container");
+
+container.addEventListener("click", (e) => {
+    let target = e.target;
+    switch(target.id) {
+        case "rock-btn":
+            console.log("rock clicked");
+            break;
+        case "paper-btn":
+            console.log("paper clicked");
+            break;
+        case "scissors-btn":
+            console.log("scissors-btn");
+            break;
+    }
+})
+
+
 function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3) + 1;
     if (randNum == 1) {
