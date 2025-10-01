@@ -35,11 +35,6 @@ function playGame() {
                 console.log(`You lose! ${computerChoice} beats ${humanChoice}. The score is ${humanScore}-${computerScore}.`);
             }
     }         
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
 }
 
 playGame();
