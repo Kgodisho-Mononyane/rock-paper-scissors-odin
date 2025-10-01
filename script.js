@@ -6,12 +6,15 @@ container.addEventListener("click", (e) => {
     switch(target.id) {
         case "rock-btn":
             console.log("rock clicked");
+            //call playRound function playRound(rock) 
             break;
         case "paper-btn":
             console.log("paper clicked");
+            //call playRound function playRound(paper)
             break;
         case "scissors-btn":
             console.log("scissors-btn");
+            //call playRound function playRound(scissors)
             break;
     }
 })
@@ -26,11 +29,6 @@ function getComputerChoice() {
     } else {
         return "scissors"
     } 
-}
-
-function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper or Scissors", );
-    return humanChoice.toLowerCase();
 }
 
 function playGame() {
