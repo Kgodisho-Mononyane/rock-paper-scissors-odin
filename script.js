@@ -1,4 +1,5 @@
 const container = document.querySelector("#button-container");
+const output = document.querySelector("#output");
 
 container.addEventListener("click", (e) => {
     let target = e.target;
