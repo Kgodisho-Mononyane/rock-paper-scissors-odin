@@ -23,7 +23,7 @@ header {
     justify-content: center;
 }
 
-#heading {
+#header-heading {
     color: var(--font-color-one);
 }
 /* Main */
