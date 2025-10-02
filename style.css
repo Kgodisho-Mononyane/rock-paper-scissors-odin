@@ -6,6 +6,7 @@
 
 :root {
     --main-color: blue;
+    --font-color-one: white;
 }
 
 body {
@@ -13,5 +14,23 @@ body {
 }
 
 /* HEADER */
+header {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+}
+
+#heading {
+    color: var(--font-color-one);
+}
 /* Main */
 /* FOOTER */
+footer {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+}
+
+#copyright {
+    color: var(--font-color-one);
+}
