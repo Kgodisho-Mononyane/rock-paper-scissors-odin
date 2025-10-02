@@ -10,11 +10,14 @@
 }
 
 body {
-    overflow: none;
+    overflow: hidden;
+    height: 100%;
 }
 
 /* HEADER */
 header {
+    height: 10vh;
+    width: 100vw;
     background-color: var(--main-color);
     display: flex;
     justify-content: center;
@@ -24,8 +27,16 @@ header {
     color: var(--font-color-one);
 }
 /* Main */
+main {
+    height: 80vh;
+    width: 100vw;
+}
+
+
 /* FOOTER */
 footer {
+    height: 10vh;
+    width: 100vw;
     background-color: var(--main-color);
     display: flex;
     justify-content: center;
