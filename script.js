@@ -17,17 +17,21 @@ container.addEventListener("click", (e) => {
         case "rock-btn":
             console.log("rock clicked");
             //call playRound function playRound(rock)
+            playRound(rock)
             break;
         case "paper-btn":
             console.log("paper clicked");
             //call playRound function playRound(paper)
+            playRound(paper)
             break;
         case "scissors-btn":
             console.log("scissors-btn");
             //call playRound function playRound(scissors)
+            playRound(scissors)
             break;
         case "reset-btn":
             console.log("reset-btn")
+            reset();
             break;
     }
 })
@@ -48,12 +52,9 @@ function getHumanChoice(choice) {
     return humanChoice.toLowerCase();
 }
 
-
-
-function playGame() {
-    function playRound() {
+function playRound(choice) {
         const computerChoice = getComputerChoice();
-        const humanChoice = getHumanChoice();
+        const humanChoice = choice;
 
         if (humanChoice === computerChoice) {
             console.log(`It's a tie! You both picked ${humanChoice}. The score is ${humanScore}-${computerScore}.`)
@@ -69,13 +70,18 @@ function playGame() {
             }
     }
 
+function playGame() {
+    
+
 }
 
 function reset() {
     headingOne.textContent = "Choose Your Weapon!";
     headingTwo.textContent = "First to 5 wins!"
     humanScore = 0;
-    computerScore = 0;
+    computerScore = 0; 
+    playerCounter.textContent = "0";
+    computerCounter.textContent = "0";
 }
 
 playGame();
