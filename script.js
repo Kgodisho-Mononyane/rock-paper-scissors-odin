@@ -69,6 +69,15 @@ function playRound(humanChoice) {
         computerCounter.textContent = computerScore;
     }
 
+function checkWinner() {
+    if (humanScore === 5) {
+        headingOne.textContent = "You won the game!"
+        headingTwo.textContent = "Press reset to play again.";
+    } else if (computerScore === 5) {
+        headingOne.textContent = "You lost the game!"
+        headingTwo.textContent = "Press reset to play again.";
+    }
+}
 
 
 
