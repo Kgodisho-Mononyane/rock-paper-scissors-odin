@@ -12,25 +12,20 @@ playerCounter.textContent = humanScore;
 computerCounter.textContent = computerScore;
 
 container.addEventListener("click", (e) => {
-    let target = e.target;
-    switch(target.id) {
-        case "rock-btn":
-            //call playRound function playRound(rock)
-            //playRound(rock)
-            break;
-        case "paper-btn":
-            //call playRound function playRound(paper)
-            //playRound(paper)
-            break;
-        case "scissors-btn":
-            //call playRound function playRound(scissors)
-            //playRound(scissors)
-            break;
-        case "reset-btn":
-            reset();
-            break;
-    }
-})
+    const target = e.target;
+    const buttonMap = {
+        "rock-btn": "rock",
+        "paper-btn": "paper",
+        "scissors-btn": "scissors"
+    };
+    
+    if (buttonMap[target.id]) {
+        alert(`${buttonMap[target.id]} clicked`)
+        playRound(buttonMap[target.id]);
+    } else if (target.id === "reset-btn") {
+        reset();
+    }; 
+});
 
 function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3) + 1;
