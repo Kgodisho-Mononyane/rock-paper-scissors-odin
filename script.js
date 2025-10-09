@@ -20,7 +20,6 @@ container.addEventListener("click", (e) => {
     };
     
     if (buttonMap[target.id]) {
-        alert(`${buttonMap[target.id]} clicked`)
         playRound(buttonMap[target.id]);
     } else if (target.id === "reset-btn") {
         reset();
@@ -43,13 +42,12 @@ function reset() {
     headingTwo.textContent = "First to 5 wins!"
     humanScore = 0;
     computerScore = 0; 
-    playerCounter.textContent = "0";
-    computerCounter.textContent = "0";
+    playerCounter.textContent = humanScore;
+    computerCounter.textContent = computerScore;
 }
 
-function playRound(choice) {
+function playRound(humanChoice) {
         const computerChoice = getComputerChoice();
-        const humanChoice = choice;
 
         if (humanChoice === computerChoice) {
             headingOne.textContent = "You tied!"
@@ -66,6 +64,9 @@ function playRound(choice) {
                 headingOne.textContent = "You Lose!"
                 headingTwo.textContent = `${computerChoice} beats ${humanChoice}.`;
             }
+
+        playerCounter.textContent = humanScore;
+        computerCounter.textContent = computerScore;
     }
 
 function playGame() {
