@@ -69,14 +69,6 @@ function playRound(humanChoice) {
         computerCounter.textContent = computerScore;
     }
 
-function playGame() {
-    
-//play rounds until either the player or computer gets 5 points
-}
-
-
-
-playGame();
 
 
 
