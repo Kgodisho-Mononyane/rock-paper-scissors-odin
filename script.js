@@ -8,9 +8,6 @@ const output = document.querySelector("#output");
 const playerCounter = document.querySelector("#player-counter");
 const computerCounter = document.querySelector("#computer-counter");
 
-playerCounter.textContent = humanScore;
-computerCounter.textContent = computerScore;
-
 container.addEventListener("click", (e) => {
     const target = e.target;
     const buttonMap = {
