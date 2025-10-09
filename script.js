@@ -11,22 +11,6 @@ const computerCounter = document.querySelector("#computer-counter");
 playerCounter.textContent = humanScore;
 computerCounter.textContent = computerScore;
 
-function getComputerChoice() {
-    let randNum = Math.floor(Math.random() * 3) + 1;
-    if (randNum == 1) {
-        return "rock";
-    } else if (randNum == 2) {
-        return "paper"
-    } else {
-        return "scissors"
-    } 
-}
-
-function getHumanChoice(choice) {
-    let humanChoice = choice;
-    return humanChoice.toLowerCase();
-}
-
 container.addEventListener("click", (e) => {
     let target = e.target;
     switch(target.id) {
@@ -48,9 +32,25 @@ container.addEventListener("click", (e) => {
     }
 })
 
-function playGame() {
-    
+function getComputerChoice() {
+    let randNum = Math.floor(Math.random() * 3) + 1;
+    if (randNum == 1) {
+        return "rock";
+    } else if (randNum == 2) {
+        return "paper"
+    } else {
+        return "scissors"
+    } 
+}
 
+function getHumanChoice(choice) {
+    let humanChoice = choice;
+    return humanChoice.toLowerCase();
+}
+
+
+
+function playGame() {
     function playRound() {
         const computerChoice = getComputerChoice();
         const humanChoice = getHumanChoice();
@@ -69,6 +69,13 @@ function playGame() {
             }
     }
 
+}
+
+function reset() {
+    headingOne.textContent = "Choose Your Weapon!";
+    headingTwo.textContent = "First to 5 wins!"
+    humanScore = 0;
+    computerScore = 0;
 }
 
 playGame();
