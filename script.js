@@ -1,6 +1,8 @@
-let humanScore = 4;
-let computerScore = 3;
+let humanScore = 0;
+let computerScore = 0;
 
+const headingOne = document.querySelector("#heading-one");
+const headingTwo = document.querySelector("#heading-two");
 const container = document.querySelector("#button-container");
 const output = document.querySelector("#output");
 const playerCounter = document.querySelector("#player-counter");
