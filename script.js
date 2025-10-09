@@ -67,6 +67,7 @@ function playRound(humanChoice) {
 
         playerCounter.textContent = humanScore;
         computerCounter.textContent = computerScore;
+        checkWinner();
     }
 
 function checkWinner() {
