@@ -1,8 +1,13 @@
-let humanScore = 0;
-let computerScore = 0;
+let humanScore = 4;
+let computerScore = 3;
 
 const container = document.querySelector("#button-container");
 const output = document.querySelector("#output");
+const playerCounter = document.querySelector("#player-counter");
+const computerCounter = document.querySelector("#computer-counter");
+
+playerCounter.textContent = humanScore;
+computerCounter.textContent = computerScore;
 
 function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3) + 1;
