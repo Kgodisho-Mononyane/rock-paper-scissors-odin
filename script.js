@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 const container = document.querySelector("#button-container");
 const output = document.querySelector("#output");
 
@@ -39,8 +42,7 @@ container.addEventListener("click", (e) => {
 })
 
 function playGame() {
-    let humanScore = 0;
-    let computerScore = 0;
+    
 
     function playRound() {
         const computerChoice = getComputerChoice();
