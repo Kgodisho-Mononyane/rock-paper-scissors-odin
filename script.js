@@ -43,11 +43,6 @@ function getComputerChoice() {
     } 
 }
 
-function getHumanChoice(choice) {
-    let humanChoice = choice;
-    return humanChoice.toLowerCase();
-}
-
 function reset() {
     headingOne.textContent = "Choose Your Weapon!";
     headingTwo.textContent = "First to 5 wins!"
