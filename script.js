@@ -17,17 +17,17 @@ container.addEventListener("click", (e) => {
         case "rock-btn":
             console.log("rock clicked");
             //call playRound function playRound(rock)
-            playRound(rock)
+            //playRound(rock)
             break;
         case "paper-btn":
             console.log("paper clicked");
             //call playRound function playRound(paper)
-            playRound(paper)
+            //playRound(paper)
             break;
         case "scissors-btn":
             console.log("scissors-btn");
             //call playRound function playRound(scissors)
-            playRound(scissors)
+            //playRound(scissors)
             break;
         case "reset-btn":
             console.log("reset-btn")
@@ -52,6 +52,15 @@ function getHumanChoice(choice) {
     return humanChoice.toLowerCase();
 }
 
+function reset() {
+    headingOne.textContent = "Choose Your Weapon!";
+    headingTwo.textContent = "First to 5 wins!"
+    humanScore = 0;
+    computerScore = 0; 
+    playerCounter.textContent = "0";
+    computerCounter.textContent = "0";
+}
+
 function playRound(choice) {
         const computerChoice = getComputerChoice();
         const humanChoice = choice;
@@ -63,10 +72,12 @@ function playRound(choice) {
             humanChoice == "paper" && computerChoice == "rock" ||
             humanChoice == "scissors" && computerChoice == "paper") {
                 humanScore++;
-                console.log(`You win! ${humanChoice} beats ${computerChoice}. The score is ${humanScore}-${computerScore}.`);
+                headingOne.textContent = "You Win!"
+                headingTwo.textContent = `${humanChoice} beats ${computerChoice}.`;
             } else {
                 computerScore++;
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}. The score is ${humanScore}-${computerScore}.`);
+                headingOne.textContent = "You Lose!"
+                headingTwo.textContent = `${computerChoice} beats ${humanChoice}.`;
             }
     }
 
@@ -75,14 +86,7 @@ function playGame() {
 
 }
 
-function reset() {
-    headingOne.textContent = "Choose Your Weapon!";
-    headingTwo.textContent = "First to 5 wins!"
-    humanScore = 0;
-    computerScore = 0; 
-    playerCounter.textContent = "0";
-    computerCounter.textContent = "0";
-}
+
 
 playGame();
 
