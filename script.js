@@ -15,22 +15,18 @@ container.addEventListener("click", (e) => {
     let target = e.target;
     switch(target.id) {
         case "rock-btn":
-            console.log("rock clicked");
             //call playRound function playRound(rock)
             //playRound(rock)
             break;
         case "paper-btn":
-            console.log("paper clicked");
             //call playRound function playRound(paper)
             //playRound(paper)
             break;
         case "scissors-btn":
-            console.log("scissors-btn");
             //call playRound function playRound(scissors)
             //playRound(scissors)
             break;
         case "reset-btn":
-            console.log("reset-btn")
             reset();
             break;
     }
@@ -66,7 +62,8 @@ function playRound(choice) {
         const humanChoice = choice;
 
         if (humanChoice === computerChoice) {
-            console.log(`It's a tie! You both picked ${humanChoice}. The score is ${humanScore}-${computerScore}.`)
+            headingOne.textContent = "You tied!"
+            headingTwo.textContent = `You both picked ${computerChoice}`;
         } else if 
             (humanChoice == "rock" && computerChoice == "scissors" ||
             humanChoice == "paper" && computerChoice == "rock" ||
@@ -83,7 +80,7 @@ function playRound(choice) {
 
 function playGame() {
     
-
+//play rounds until either the player or computer gets 5 points
 }
 
 
