@@ -34,17 +34,3 @@ main {
     justify-content: center;
     /* flex-direction: column; */
 }
-
-
-/* FOOTER */
-footer {
-    height: 10vh;
-    width: 100vw;
-    background-color: var(--main-color);
-    display: flex;
-    justify-content: center;
-}
-
-#copyright {
-    color: var(--font-color-one);
-}
