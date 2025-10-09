@@ -32,6 +32,9 @@ container.addEventListener("click", (e) => {
             console.log("scissors-btn");
             //call playRound function playRound(scissors)
             break;
+        case "reset-btn":
+            console.log("reset-btn")
+            break;
     }
 })
 
